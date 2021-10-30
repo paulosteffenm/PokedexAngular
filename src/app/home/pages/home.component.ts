@@ -11,11 +11,14 @@ export class HomeComponent implements OnInit {
     private pokemonService: PokemonService,
   ) { }
 
-  public pokemons = null;
+  public pokemons = [];
+
+  public isLoading = true;
 
   ngOnInit(): void {
     this.pokemonService.getAllPokemons().subscribe((pokemons) => {
       this.pokemons = pokemons;
+      this.isLoading = false;
     });
   }
 }

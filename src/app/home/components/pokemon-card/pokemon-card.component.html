@@ -1,1 +1,18 @@
-<p>pokemon-card works!</p>
+<div class="card-deck">
+  <section *ngFor="let pokemon of pokemons" class="card mt-4 border-0 shadow-sm" [routerLink]="['/detail/', pokemon.Name]">
+    <div class="card-header bg-white border-0">
+      <h1 class="mb-0">{{ pokemon.Name | titlecase }}</h1>
+      <h2 class="mb-0 text-secondary font-weight-light h3">Nº{{ pokemon.Id | number: "3.0" }}</h2>
+    </div>
+    <img
+      class="card-img-top bg-light"
+      [attr.src]="pokemon.Image"
+      [attr.alt]="pokemon.Name"
+    />
+    <div class="card-body d-flex flex-row">
+      <p *ngFor="let type of pokemon.Types" class="mb-0 mr-1 font-weight-bold" ngClass="{{type}}">
+        {{ type | titlecase }}
+      </p>
+    </div>
+  </section>
+</div>

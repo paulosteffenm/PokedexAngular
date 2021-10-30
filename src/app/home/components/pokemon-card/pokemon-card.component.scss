@@ -1,0 +1,87 @@
+$normal: 1000px;
+$small: 750px;
+
+.card {
+  @media screen and (max-width: $small) {
+    min-width: 80%;
+    max-width: 80%;
+  }
+
+  @media screen and (min-width: $normal){
+    min-width: 20%;
+    max-width: 20%;
+  }
+
+  @media screen and (min-width: $small) and (max-width: $normal){
+    min-width: 25%;
+    max-width: 25%;
+  }
+}
+
+.grass {
+  color: chartreuse;
+}
+
+.poison {
+  color: purple;
+}
+
+.fire {
+  color: red;
+}
+
+.water {
+  color: blue;
+}
+
+.bug {
+  color: yellowgreen;
+}
+
+.flying {
+  color: deepskyblue;
+}
+
+.normal {
+  color: bisque;
+}
+
+.electric {
+  color: yellow;
+}
+
+.ground {
+  color: sandybrown;
+}
+
+.fairy {
+  color: pink;
+}
+
+.fighting {
+  color: darkorange;
+}
+
+.psychic {
+  color: fuchsia;
+}
+
+.rock {
+  color: darkgrey;
+}
+
+.steel {
+  color: dimgrey;
+}
+
+.ice {
+  color: aqua;
+}
+
+.ghost {
+  color: indigo;
+}
+
+.dragon {
+  color: tomato;
+}

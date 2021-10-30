@@ -3,11 +3,15 @@ export class Pokemon {
 
   public Name?: string;
 
-  public baseExperience?: number;
+  public BaseExperience?: number;
 
   public Height?: number;
 
   public Weight?: number;
+
+  public Image?: string;
+
+  public Types?: Array<string>;
 
   constructor(data?: Partial<Pokemon>) {
     Object.assign(this, data);

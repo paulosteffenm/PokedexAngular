@@ -1,17 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { HomeComponent } from './pages/home.component';
+import { RouterModule } from '@angular/router';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
-
+import { HomeComponent } from './pages/home.component';
 
 @NgModule({
-  imports: [],
-  declarations: [
-
-  
-    PokemonCardComponent
-  ],
-  providers: [
-    HomeComponent,
-  ],
+  imports: [CommonModule, RouterModule],
+  declarations: [HomeComponent, PokemonCardComponent],
+  exports: [HomeComponent],
+  providers: [],
 })
-export class HomeModule { }
+export class HomeModule {}
